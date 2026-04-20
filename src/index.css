@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+  
+  /* Tailwind 4 theme variables */
+  --color-primary: #475569; /* Slate 600 */
+  --color-accent: #94a3b8;  /* Slate 400 */
+}
+
+/* Import Inter Font */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #fcfcfc;
+  color: #334155; /* Slate 700 */
+}
+
+#root {
+  width: 100%;
+}
+
+/* Custom Scrollbar - Even more subtle */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e2e8f0;
+}
+
+/* Custom Utility Class */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Prose refinements - Muted */
+.prose pre {
+  margin: 0 !important;
+  border-radius: 12px !important;
+  background: #f8fafc !important;
+  border: 1px solid #f1f5f9 !important;
+}
+
+.prose code {
+  color: #64748b !important;
+  background: #f1f5f9 !important;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.prose a {
+  color: #475569;
+  text-decoration-color: #cbd5e1;
+}
+
+.prose a:hover {
+  color: #1e293b;
+  text-decoration-color: #94a3b8;
+}
